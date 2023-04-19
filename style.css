@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+:root {
+    --color-soft-red: hsl(10, 79%, 65%);
+    --color-cyan: hsl(186, 34%, 60%);
+    --color-dark-brown: hsl(25, 47%, 15%);
+    --color-medium-brown: hsl(28, 10%, 53%);
+    --color-cream: hsl(27, 66%, 92%);
+    --color-pale-orange: hsl(33, 100%, 98%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    min-height: 100vh;
+    background: var(--color-cream);
+    font-family: 'DM Sans', sans-serif;
+}
+
+main {
+    padding-inline: 20px;
+    width: 600px;
+    max-width: 100%;
+}
+
+.balance {
+    margin-bottom: 2rem;
+    background: var(--color-soft-red);
+    color: white;
+    border-radius: 1rem;
+}
+
+.balance, .spent {
+    padding: 2rem;
+}
+
+.spent {
+    background: var(--color-pale-orange);
+    border-radius: 1rem;
+}
+
+.spent span, .percentage, .spent h2 {
+    margin: 0;
+    color: var(--color-dark-brown);
+}
+
+.spent .percentage {
+    font-weight: bold;
+}
+
+.balance-number {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.percent-container {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    width:200px;
+}
+
+.percent-container {
+    margin-left: auto;
+}
+
+.balance-number span {
+    font-size: 1.8rem;
+    margin-top: auto;
+    font-weight: bold;
+}
+
+.barchart {
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+}
+
+.bar {
+    width: 10%;
+    height: 100px;
+    background: var(--color-soft-red);
+    border-radius: 5px;
+    margin-top: auto;
+    cursor: pointer;
+}
+
+.bar:hover{
+    opacity: 0.5;
+}
+
+
+
+.labels span {
+    width: 10%;
+}
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.monday {
+    height: 15%;
+}
+
+.tuesday {
+    height: 50%;
+}
+
+.wednesday {
+    background: var(--color-cyan);
+    height: 130px;
+}
+
+.thursday {
+    height: 40%;
+}
+
+.friday {
+    height: 25%;
+}
+
+.saturday {
+    height: 65%;
+}
+
+.sunday {
+    height: 30%;
+}
+
+.break {
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-cream);
+    margin-bottom: 1.5rem;
+}
+
+.total {
+    display: flex;
+}
+
+.total h2 {
+    margin-top: auto;
+}
+
+.price span {
+    
+    color: white;
+}
+
+.pr {
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--color-pale-orange);
+    background: var(--color-dark-brown);
+    opacity: 0;
+    pointer-events: none;
+}

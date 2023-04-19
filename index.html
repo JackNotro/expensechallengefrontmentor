@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon-32x32.png">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <title>Expenses Chart Challenge</title>
+</head>
+<body>
+  <main>
+    <div class="balance-container">
+      <div class="balance">
+        <span>My balance</span>
+        <div class="balance-number">
+          <span>$921.48</span>
+          <svg width="72" height="48" viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#382314" cx="48" cy="24" r="24"/><circle stroke="#FFF" stroke-width="2" cx="24" cy="24" r="23"/></g></svg>
+        </div>
+        
+      </div>
+        <div class="spent">
+          <h2>Spending - Last 7 days</h2>
+          <div class="price labels">
+            <div class="monpr pr">
+              <span>$10.50</span>
+            </div>
+            <div class="tuepr pr">
+              <span>$30.76</span>
+            </div>
+            <div class="wedpr pr">
+              <span>$52.36</span>
+            </div>
+            <div class="thurpr pr">
+              <span>$31.07</span>
+            </div>
+            <div class="fripr pr">
+              <span>$21.02</span>
+            </div>
+            <div class="satpr pr">
+              <span>$45.20</span>
+            </div>
+            <div class="sunpr pr">
+              <span>$25.3</span>
+            </div>
+          </div>
+          <div class="barchart">
+            <div class="monday bar"></div>
+            <div class="tuesday bar"></div>
+            <div class="wednesday bar"></div>
+            <div class="thursday bar"></div>
+            <div class="friday bar"></div>
+            <div class="saturday bar"></div>
+            <div class="sunday bar"></div>
+          </div>
+          <div class="labels">
+            <span>mon</span>
+            <span>tues</span>
+            <span>wed</span>
+            <span>thu</span>
+            <span>fri</span>
+            <span>sat</span>
+            <span>sun</span>
+          </div>
+          <br>
+          <div class="break"></div>
+          <div class="total-container">
+            <span>Total this month</span>
+            <div class="total">
+                <h2>$478.33</h2>
+              <div class="percent-container">
+                <span class="percentage">+2.4%</span>
+                <span>from last month</span>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </main>
+
+  <script>
+    function showElement(element) {
+      $(element).css("opacity", "1");
+    }
+
+    function hideElement(element) {
+      $(element).css("opacity", "0");
+    }
+
+    $(document).ready(function () {
+      $(".monday").hover(function () {
+        showElement(".monpr");
+      }, function () {
+        hideElement(".monpr");
+      });
+      $(".tuesday").hover(function () {
+        showElement(".tuepr");
+      }, function () {
+        hideElement(".tuepr");
+      });
+      $(".wednesday").hover(function () {
+        showElement(".wedpr");
+      }, function () {
+        hideElement(".wedpr");
+      });
+      $(".thursday").hover(function () {
+        showElement(".thurpr");
+      }, function () {
+        hideElement(".thurpr");
+      });
+      $(".friday").hover(function () {
+        showElement(".fripr");
+      }, function () {
+        hideElement(".fripr");
+      });
+      $(".saturday").hover(function () {
+        showElement(".satpr");
+      }, function () {
+        hideElement(".satpr");
+      });
+      $(".sunday").hover(function () {
+        showElement(".sunpr");
+      }, function () {
+        hideElement(".sunpr");
+      });
+    });
+  </script>
+</body>
+</html>
